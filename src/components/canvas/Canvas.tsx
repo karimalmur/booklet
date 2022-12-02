@@ -3,14 +3,14 @@ import { fabric } from 'fabric'
 
 export const FabricJSCanvas = () => {
   const canvasEl = useRef(null)
-  var text = new fabric.Text('hello world', { left: 100, top: 100 })
+  const text = new fabric.Text('hello world', { left: 100, top: 100 })
   useEffect(() => {
-    const canvas = new fabric.Canvas(canvasEl.current, {  })
+    const canvas = new fabric.Canvas(canvasEl.current, {})
     canvas.add(text)
     return () => {
       canvas.dispose()
     }
   }, [])
 
-  return (<canvas width="300" height="300" ref={canvasEl}/>)
+  return <canvas width="300" height="300" ref={canvasEl} />
 }
