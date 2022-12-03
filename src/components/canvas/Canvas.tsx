@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { fabric } from 'fabric'
 
-export const FabricJSCanvas = () => {
+export const Canvas = () => {
   const canvasEl = useRef(null)
   const text = new fabric.Text('hello world', { left: 100, top: 100 })
   useEffect(() => {

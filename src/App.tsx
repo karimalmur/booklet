@@ -1,10 +1,10 @@
 import './App.css'
-import { FabricJSCanvas } from './components/canvas/Canvas'
+import { Canvas } from './components/canvas/Canvas'
 
 function App() {
   return (
     <div className="App">
-      <FabricJSCanvas />
+      <Canvas />
     </div>
   )
 }

@@ -7,7 +7,13 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .ts,.tsx"
+    "test": "vitest",
+    "test-ui": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .ts,.tsx",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "v": "node -v"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.45.0",
@@ -18,16 +24,34 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.11",
     "fabric": "^5.2.4",
+    "node": "18.12.1",
     "prettier": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^7.0.0-alpha.57",
+    "@storybook/addon-essentials": "^7.0.0-alpha.57",
+    "@storybook/addon-interactions": "^7.0.0-alpha.57",
+    "@storybook/addon-links": "^7.0.0-alpha.57",
+    "@storybook/react": "^7.0.0-alpha.57",
+    "@storybook/react-vite": "^7.0.0-alpha.57",
+    "@storybook/testing-library": "^0.0.14-next.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/fabric": "^4.5.13",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "@vitest/coverage-c8": "^0.25.3",
+    "@vitest/ui": "^0.25.3",
+    "babel-loader": "^8.3.0",
+    "eslint-plugin-storybook": "^0.6.7",
+    "jsdom": "^20.0.3",
+    "storybook": "^7.0.0-alpha.57",
     "typescript": "^4.6.4",
-    "vite": "^3.2.3"
+    "vite": "^3.2.3",
+    "vitest": "^0.25.3"
   }
 }
