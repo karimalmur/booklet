@@ -39,6 +39,8 @@ jobs:
           curl -Os https://uploader.codecov.io/latest/linux/codecov
           chmod +x codecov
           ./codecov
+        with:
+          token: CODECOV_TOKEN=81073e1f-1d5d-4a23-b8f3-4bb0300e6dca
       - name: Build
         run: npm run build --if-present
       - name: Deploy
