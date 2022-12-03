@@ -20,22 +20,23 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install dependencies
-    - run: npm ci
+      run: npm ci
     - name: Test
-    - run: npm run coverage
+      run: npm run coverage
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
         token: CODECOV_TOKEN=81073e1f-1d5d-4a23-b8f3-4bb0300e6dca
     - name: Build
-    - run: npm run build --if-present
+      run: npm run build --if-present
     - name: Deploy
       run: |
         git config --global user.name $user_name
