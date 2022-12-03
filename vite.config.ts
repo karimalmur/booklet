@@ -1,10 +1,18 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
+import path from 'path'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        // Use .babelrc files, necessary to use LinguiJS CLI
+        babelrc: true,
+      },
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',
@@ -20,6 +28,7 @@ export default defineConfig({
        *   to resolve to vitest which, critically, exports { expect } as well.
        */
       '@storybook/jest': 'vitest',
+      '~': path.resolve(__dirname, 'src'),
     },
   },
   define: {
