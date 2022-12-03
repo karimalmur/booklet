@@ -6,7 +6,7 @@ import {
 } from '@mui/material/styles'
 import { deepmerge } from '@mui/utils'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { enUS, deDE, Localization } from '@mui/material/locale'
+import { enUS, Localization } from '@mui/material/locale'
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material/utils'
 import { getDesignTokens, getMetaThemeColor, getThemedComponents } from 'theme/theme'
 import { UserLanguage, useUserLanguage } from 'core/i18n'
